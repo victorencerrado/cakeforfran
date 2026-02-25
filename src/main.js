@@ -70,7 +70,7 @@ const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 let soundBuffer = null;
 
 // con el sonio de sans lets goooo se pudo
-fetch('/sonidos/sans.mp3')
+fetch('sonidos/sans.mp3')
   .then(res => res.arrayBuffer())
   .then(data => audioCtx.decodeAudioData(data))
   .then(buffer => { soundBuffer = buffer; })
@@ -132,7 +132,7 @@ const textureLoader = new THREE.TextureLoader();
 const scene = new THREE.Scene();
 
 // imagen de fondo
-const bgTexture = new THREE.TextureLoader().load('/imagenes/fondo.png', (tex) => {
+const bgTexture = new THREE.TextureLoader().load('imagenes/fondo.png', (tex) => {
   tex.colorSpace = THREE.SRGBColorSpace; // esto arregla los colores lavados
   scene.background = tex;
 });
@@ -313,10 +313,10 @@ for (let i = 0; i < 3; i++) {
 // ── fotos con margenes ─────────────────────────────────────────────────────────────
 
 const imagePaths = [
-  '/imagenes/1.png',
-  '/imagenes/2.png',
-  '/imagenes/3.png',
-  '/imagenes/4.png',
+  'imagenes/1.png',
+  'imagenes/2.png',
+  'imagenes/3.png',
+  'imagenes/4.png',
 ];
 
 // revisa cuantas imagenes existen y solo muestra hasta 4 (porque solo hice 4 posiciones para las fotos)
